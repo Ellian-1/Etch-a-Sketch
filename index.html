@@ -12,27 +12,30 @@
 
     <!--This is the html structure of the game-->
     <div class="flex-container container-fluid">
-        <h1 class="tittle h1">Etch-a-Sketch</h1>
-        <!--This includes the buttons and the input of the game-->
-        <div class="content">
-            <!--The board of the game-->
-            <div class="board"></div>
-            <!--The buttons-->
-            <div class="btn-container">
-                <button class="btn btn-dark" onclick="SetColor('black')">Black</button>
-                <button class="btn btn-light" onclick="SetColor('white')">White</button>
-                <button class="random" onclick="SetColor('random')">Random</button>
-                <button class="reset btn btn-danger" onclick="Reset()">Reset</button>
-            </div>
-            <!--The imput-->
-            <div class="input-container">
-                <label for="board-size">Border Size
-                    <input id="board-size" type="text" placeholder="Board Size" onchange="SetSize(this.value)">
-                </label>
-                <button class="btn btn-primary">Set</button>
+        <div class="card w-50 mx-auto">
+            <!--This includes the buttons and the input of the game-->
+            <div class="content card-body mx-auto">
+                <h1 class="tittle card-title">Etch-a-Sketch</h1>
+                <p class="card-text">Select a color option and drawing</p>
+                <!--The board of the game-->
+                <div class="board border border-dark rounded"></div>
+                <!--The buttons-->
+                <div class="btn-container btn-group w-100 mb-2" role="group">
+                    <button class="btn btn-dark" onclick="SetColor('black')">Black</button>
+                    <button class="btn btn-light" onclick="SetColor('white')">White</button>
+                    <button class="random btn text-light" onclick="SetColor('random')">Random</button>
+                    <button class="reset btn btn-danger" onclick="Reset()">Reset</button>
+                </div>
+                <!--The imput-->
+                <div class="input-container input-group">
+                    <label class="input-group-text" for="board-size">Border Size</label>
+                    <input class="form-control" id="board-size" type="text" placeholder="Board Size" onchange="SetSize(this.value)">
+                    <button class="btn btn-primary">Set</button>
+                </div>
             </div>
         </div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>

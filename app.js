@@ -5,7 +5,6 @@ const BoardSet = (size) => {
     squares.forEach((div) => div.remove());
     board.style.gridTemplateColumns = `repeat(${size} , 1fr)`;
     board.style.gridTemplateRows = `repeat(${size} , 1fr)`;
-    board.style.border = "1px solid black";
     
     let amount = size * size;
     for (let i = 0; i < amount; i++) {
