@@ -6,30 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstap.mm">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
 
     <!--This is the html structure of the game-->
-    <div class="flex-container">
-        <h1 class="tittle">Etch-a-Sketch</h1>
+    <div class="flex-container container-fluid">
+        <h1 class="tittle h1">Etch-a-Sketch</h1>
         <!--This includes the buttons and the input of the game-->
         <div class="content">
             <!--The board of the game-->
             <div class="board"></div>
             <!--The buttons-->
             <div class="btn-container">
-                <button class="black" onclick="SetColor('black')">Black</button>
-                <button class="white" onclick="SetColor('white')">White</button>
+                <button class="btn btn-dark" onclick="SetColor('black')">Black</button>
+                <button class="btn btn-light" onclick="SetColor('white')">White</button>
                 <button class="random" onclick="SetColor('random')">Random</button>
-                <button class="reset" onclick="Reset()">Reset</button>
+                <button class="reset btn btn-danger" onclick="Reset()">Reset</button>
             </div>
             <!--The imput-->
             <div class="input-container">
                 <label for="board-size">Border Size
                     <input id="board-size" type="text" placeholder="Board Size" onchange="SetSize(this.value)">
                 </label>
-                <button>Set</button>
+                <button class="btn btn-primary">Set</button>
             </div>
         </div>
     </div>
