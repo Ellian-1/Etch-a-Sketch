@@ -18,15 +18,15 @@
             <div class="board"></div>
             <!--The buttons-->
             <div class="btn-container">
-                <button class="black">Black</button>
-                <button class="white">White</button>
-                <button class="random">Random</button>
+                <button class="black" onclick="SetColor('black')">Black</button>
+                <button class="white" onclick="SetColor('white')">White</button>
+                <button class="random" onclick="SetColor('random')">Random</button>
                 <button class="reset">Reset</button>
             </div>
             <!--The imput-->
             <div class="input-container">
                 <label for="board-size">Border Size
-                    <input id="board-size" type="text" placeholder="Board Size">
+                    <input id="board-size" type="text" placeholder="Board Size" onchange="SetSize(this.value)">
                 </label>
                 <button>Set</button>
             </div>
